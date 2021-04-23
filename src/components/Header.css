@@ -1,0 +1,36 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+.header-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gg {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cc {
+  margin: 0px 20px;
+  color: rgb(255, 254, 233);
+}
+
+.link {
+  color: rgb(255, 254, 233);
+}
+
+Dropdown:hover {
+  color: rgba(111, 136, 133, 1);
+}
+.navbar {
+  display: flex;
+
+  /* justify-content: space-evenly; */
+  align-items: flex-end;
+}

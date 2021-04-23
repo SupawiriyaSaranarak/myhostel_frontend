@@ -1,13 +1,82 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.code-box-demo {
+  text-align: center;
+}
+.ant-layout-header,
+.ant-layout-footer {
+  color: #fff;
+  background: #7dbcea;
+}
+[data-theme="dark"] .ant-layout-header {
+  background: #6aa0c7;
+}
+[data-theme="dark"] .ant-layout-footer {
+  background: #6aa0c7;
+}
+.ant-layout-footer {
+  line-height: 1.5;
+}
+.ant-layout-sider {
+  color: #fff;
+  line-height: 120px;
+  background: #3ba0e9;
+}
+[data-theme="dark"] .ant-layout-sider {
+  background: #3499ec;
+}
+.ant-layout-content {
+  min-height: 120px;
+  color: #fff;
+  line-height: 120px;
+  background: rgba(16, 142, 233, 1);
+}
+[data-theme="dark"] .ant-layout-content {
+  background: #107bcb;
+}
+.code-box-demo > .ant-layout + .ant-layout {
+  margin-top: 48px;
+}
+.nav-bar {
+  background-color: rgba(105, 77, 63, 1);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+}
+.content-header {
+  height: auto;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 75px;
+  color: rgba(43, 48, 42, 1);
+}
+.content-body {
+  padding: 0px 100px;
+  background-color: rgba(255, 254, 233, 1);
+}
+.container-box {
+  padding: 10px;
+  background-color: rgba(188, 132, 73, 1);
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.item-box {
+  display: flex;
+  padding: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 25px;
+  margin: 20px 20px;
+  /* border: 2px solid black; */
+  height: auto;
+  color: rgba(43, 48, 42, 1);
+  background-color: rgba(237, 225, 175, 1);
+  box-shadow: black;
 }
