@@ -101,6 +101,7 @@ function ModalCreateNewBooking(props) {
         discount: "",
         accomodationId: [],
       });
+
       setAccomodationId([]);
 
       // console.log(response);

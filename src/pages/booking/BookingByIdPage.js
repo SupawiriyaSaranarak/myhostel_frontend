@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import "../../index.css";
 import { Layout } from "antd";
 import Header from "../../components/Header";
-import GetBookingByIdContent from "../../components/GetBookingByIdContent";
+import GetBookingByIdContent from "../../components/bookingComponent/GetBookingByIdContent";
 
 const { Footer, Sider, Content } = Layout;
 function BookingByIdPage() {

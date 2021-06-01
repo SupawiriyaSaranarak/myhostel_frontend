@@ -13,6 +13,7 @@ function ModalGetBookingById(props) {
   const history = useHistory();
   const [searchId, setSearchId] = useState("");
   const handleInputChange = (e) => {
+    console.log(e.target.value);
     setSearchId(e.target.value);
   };
   const { setId } = useContext(Context);

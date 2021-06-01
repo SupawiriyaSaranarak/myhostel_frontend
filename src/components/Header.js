@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Row, Col } from "antd";
 import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
 import "./Header.css";
@@ -6,8 +6,18 @@ import MenuForSuperadmin from "./MenuForSuperadmin";
 import Search from "./Search";
 import Icon from "../picture/hostel.png";
 import { Link, useHistory } from "react-router-dom";
+import localStorageService from "../services/localStorageService";
+import { AuthContext } from "../contexts/AuthContextProvider";
 
 function Header() {
+  const { user, setUser } = useContext(AuthContext);
+  const history = useHistory();
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorageService.clearToken();
+    setUser(false);
+    history.push("/login");
+  };
   return (
     <div>
       <nav className="nav-bar">
@@ -24,11 +34,21 @@ function Header() {
             </Row>
           </Col>
           <Col className="header-icon" span={4}>
-            <Link className="link" to="/booking">
-              <LoginOutlined style={{ fontSize: "40px" }} />
-              <br></br>
-              Register/LogIn
-            </Link>
+            {(user.userStatus === "ADMIN" ||
+              user.userStatus === "SUPERADMIN") && (
+              <a onClick={(e) => handleLogout(e)}>
+                <LogoutOutlined style={{ fontSize: "40px" }} />
+                <br></br>
+                LogOut
+              </a>
+            )}
+            {!user && (
+              <a onClick={() => history.push("/login")}>
+                <LoginOutlined style={{ fontSize: "40px" }} />
+                <br></br>
+                Register/LogIn
+              </a>
+            )}
           </Col>
         </Row>
       </nav>
